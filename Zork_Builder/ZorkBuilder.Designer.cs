@@ -1,6 +1,6 @@
 ﻿namespace Zork_Builder
 {
-	partial class Form1
+	partial class ZorkBuilder
 	{
 		/// <summary>
 		/// Required designer variable.
@@ -28,10 +28,19 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.components = new System.ComponentModel.Container();
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(800, 450);
-			this.Text = "Form1";
+            this.SuspendLayout();
+            // 
+            // ZorkBuilder
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1350, 729);
+            this.Name = "ZorkBuilder";
+            this.Text = "ZorkBuilder";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.ZorkBuilder_Load);
+            this.ResumeLayout(false);
+
 		}
 
 		#endregion

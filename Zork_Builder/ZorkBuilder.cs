@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Zork_Builder
 {
-	public partial class Form1 : Form
+	public partial class ZorkBuilder : Form
 	{
-		public Form1()
+		public ZorkBuilder()
 		{
 			InitializeComponent();
 		}
-	}
+
+        private void ZorkBuilder_Load(object sender, EventArgs e)
+        {
+
+        }
+    }
 }
