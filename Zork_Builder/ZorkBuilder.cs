@@ -1,17 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 using System.Windows.Forms;
+using Newtonsoft.Json;
+using Zork_Builder.Data;
 
 namespace Zork_Builder
 {
 	public partial class ZorkBuilder : Form
 	{
+		private World World
+		{
+			get => mWorld;
+			set => mWorld = value;
+		}
+
 		public ZorkBuilder()
 		{
 			InitializeComponent();
@@ -21,5 +23,16 @@ namespace Zork_Builder
         {
 
         }
-    }
+
+		private void SelectFileButton_Click(object sender, EventArgs e)
+		{
+			if (openFileDialog.ShowDialog() == DialogResult.OK)
+			{
+				World = JsonConvert.DeserializeObject<World>(File.ReadAllText(openFileDialog.FileName));
+				filenameTextBox.Text = openFileDialog.FileName;
+			}
+		}
+
+		private World mWorld;
+	}
 }

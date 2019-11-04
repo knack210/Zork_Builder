@@ -8,3 +8,9 @@ C:\Users\ni371318\Documents\GitHub\Zork_Builder\Zork_Builder\obj\Debug\Zork_Buil
 C:\Users\ni371318\Documents\GitHub\Zork_Builder\Zork_Builder\obj\Debug\Zork_Builder.csproj.CoreCompileInputs.cache
 C:\Users\ni371318\Documents\GitHub\Zork_Builder\Zork_Builder\obj\Debug\Zork_Builder.exe
 C:\Users\ni371318\Documents\GitHub\Zork_Builder\Zork_Builder\obj\Debug\Zork_Builder.pdb
+C:\Users\ni371318\Documents\GitHub\Zork_Builder\Zork_Builder\bin\Debug\World.json
+C:\Users\ni371318\Documents\GitHub\Zork_Builder\Zork_Builder\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ni371318\Documents\GitHub\Zork_Builder\Zork_Builder\bin\Debug\Zork_Builder.Data.dll
+C:\Users\ni371318\Documents\GitHub\Zork_Builder\Zork_Builder\bin\Debug\Zork_Builder.Data.pdb
+C:\Users\ni371318\Documents\GitHub\Zork_Builder\Zork_Builder\bin\Debug\Newtonsoft.Json.xml
+C:\Users\ni371318\Documents\GitHub\Zork_Builder\Zork_Builder\obj\Debug\Zork_Builder.csproj.CopyComplete
