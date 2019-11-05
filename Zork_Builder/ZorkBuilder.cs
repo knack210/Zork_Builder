@@ -3,20 +3,29 @@ using System.IO;
 using System.Windows.Forms;
 using Newtonsoft.Json;
 using Zork_Builder.Data;
+using Zork_Builder.ViewModels;
 
 namespace Zork_Builder
 {
 	public partial class ZorkBuilder : Form
 	{
-		private World World
+		private WorldViewModel ViewModel
 		{
-			get => mWorld;
-			set => mWorld = value;
+			get => mViewModel;
+            set
+            {
+                if (mViewModel != value)
+                {
+                    mViewModel = value;
+                    worldViewModelBindingSource.DataSource = mViewModel;
+                }
+            }
 		}
 
 		public ZorkBuilder()
 		{
 			InitializeComponent();
+            ViewModel = new WorldViewModel();
 		}
 
         private void ZorkBuilder_Load(object sender, EventArgs e)
@@ -28,11 +37,21 @@ namespace Zork_Builder
 		{
 			if (openFileDialog.ShowDialog() == DialogResult.OK)
 			{
-				World = JsonConvert.DeserializeObject<World>(File.ReadAllText(openFileDialog.FileName));
-				filenameTextBox.Text = openFileDialog.FileName;
+				ViewModel.World = JsonConvert.DeserializeObject<World>(File.ReadAllText(openFileDialog.FileName));
+				ViewModel.Filename = openFileDialog.FileName;
 			}
 		}
 
-		private World mWorld;
-	}
+		private WorldViewModel mViewModel;
+
+        private void PlayersListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label1_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

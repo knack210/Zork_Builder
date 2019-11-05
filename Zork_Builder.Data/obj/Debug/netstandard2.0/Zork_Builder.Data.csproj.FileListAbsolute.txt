@@ -7,3 +7,12 @@ C:\Users\ni371318\Documents\GitHub\Zork_Builder\Zork_Builder.Data\obj\Debug\nets
 C:\Users\ni371318\Documents\GitHub\Zork_Builder\Zork_Builder.Data\obj\Debug\netstandard2.0\Zork_Builder.Data.AssemblyInfo.cs
 C:\Users\ni371318\Documents\GitHub\Zork_Builder\Zork_Builder.Data\obj\Debug\netstandard2.0\Zork_Builder.Data.dll
 C:\Users\ni371318\Documents\GitHub\Zork_Builder\Zork_Builder.Data\obj\Debug\netstandard2.0\Zork_Builder.Data.pdb
+C:\Users\Nick\Documents\GitHub\Zork_Builder\Zork_Builder.Data\bin\Debug\netstandard2.0\Zork_Builder.Data.deps.json
+C:\Users\Nick\Documents\GitHub\Zork_Builder\Zork_Builder.Data\bin\Debug\netstandard2.0\Zork_Builder.Data.dll
+C:\Users\Nick\Documents\GitHub\Zork_Builder\Zork_Builder.Data\bin\Debug\netstandard2.0\Zork_Builder.Data.pdb
+C:\Users\Nick\Documents\GitHub\Zork_Builder\Zork_Builder.Data\obj\Debug\netstandard2.0\Zork_Builder.Data.csprojAssemblyReference.cache
+C:\Users\Nick\Documents\GitHub\Zork_Builder\Zork_Builder.Data\obj\Debug\netstandard2.0\Zork_Builder.Data.csproj.CoreCompileInputs.cache
+C:\Users\Nick\Documents\GitHub\Zork_Builder\Zork_Builder.Data\obj\Debug\netstandard2.0\Zork_Builder.Data.AssemblyInfoInputs.cache
+C:\Users\Nick\Documents\GitHub\Zork_Builder\Zork_Builder.Data\obj\Debug\netstandard2.0\Zork_Builder.Data.AssemblyInfo.cs
+C:\Users\Nick\Documents\GitHub\Zork_Builder\Zork_Builder.Data\obj\Debug\netstandard2.0\Zork_Builder.Data.dll
+C:\Users\Nick\Documents\GitHub\Zork_Builder\Zork_Builder.Data\obj\Debug\netstandard2.0\Zork_Builder.Data.pdb
