@@ -16,3 +16,4 @@ C:\Users\Nick\Documents\GitHub\Zork_Builder\Zork_Builder.Data\obj\Debug\netstand
 C:\Users\Nick\Documents\GitHub\Zork_Builder\Zork_Builder.Data\obj\Debug\netstandard2.0\Zork_Builder.Data.AssemblyInfo.cs
 C:\Users\Nick\Documents\GitHub\Zork_Builder\Zork_Builder.Data\obj\Debug\netstandard2.0\Zork_Builder.Data.dll
 C:\Users\Nick\Documents\GitHub\Zork_Builder\Zork_Builder.Data\obj\Debug\netstandard2.0\Zork_Builder.Data.pdb
+C:\Users\ni371318\Documents\GitHub\Zork_Builder\Zork_Builder.Data\obj\Debug\netstandard2.0\Zork_Builder.Data.csproj.Fody.CopyLocal.cache

@@ -84,10 +84,8 @@ namespace Zork_Builder.Forms
             }
         }
 
-        private WorldViewModel mViewModel;
-        private bool mIsWorldLoaded;
-
-        private void OpenToolStripMenuItem_Click(object sender, EventArgs e)
+		#region Main Menu
+		private void OpenToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
@@ -96,5 +94,27 @@ namespace Zork_Builder.Forms
                 IsWorldLoaded = true;
             }
         }
-    }
+
+		private void SaveToolStripMenuItem_Click(object sender, EventArgs e) => ViewModel.SaveWorld();
+
+		private void SaveAsToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			if (saveFileDialog.ShowDialog() == DialogResult.OK)
+			{
+				ViewModel.Filename = saveFileDialog.FileName;
+				ViewModel.SaveWorld();
+			}
+		}
+
+		private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			Close();
+		}
+		#endregion
+
+		private WorldViewModel mViewModel;
+		private bool mIsWorldLoaded;
+
+		
+	}
 }
