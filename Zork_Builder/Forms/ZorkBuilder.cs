@@ -49,13 +49,7 @@ namespace Zork_Builder.Forms
 
         private void SelectFileButton_Click(object sender, EventArgs e)
         {
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                ViewModel.World = JsonConvert.DeserializeObject<World>(File.ReadAllText(openFileDialog.FileName));
-                ViewModel.Filename = openFileDialog.FileName;
-                IsWorldLoaded = true;
-
-            }
+           
         }       
 
         private void PlayersListBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -92,5 +86,15 @@ namespace Zork_Builder.Forms
 
         private WorldViewModel mViewModel;
         private bool mIsWorldLoaded;
+
+        private void OpenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                ViewModel.World = JsonConvert.DeserializeObject<World>(File.ReadAllText(openFileDialog.FileName));
+                ViewModel.Filename = openFileDialog.FileName;
+                IsWorldLoaded = true;
+            }
+        }
     }
 }

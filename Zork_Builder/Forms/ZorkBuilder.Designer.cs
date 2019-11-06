@@ -29,16 +29,16 @@
 		private void InitializeComponent()
 		{
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Label fileLabel;
             System.Windows.Forms.Label playerScoreLabel;
             System.Windows.Forms.Label playerHealthLabel;
             System.Windows.Forms.Label playerNameLabel;
-            this.filenameTextBox = new System.Windows.Forms.TextBox();
+            this.worldViewModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.selectFileButton = new System.Windows.Forms.Button();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.mainTabControl = new System.Windows.Forms.TabControl();
             this.playersTabPage = new System.Windows.Forms.TabPage();
             this.playerScoreTextBox = new System.Windows.Forms.TextBox();
+            this.playersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.playerHealthTextBox = new System.Windows.Forms.TextBox();
             this.playerNameTextBox = new System.Windows.Forms.TextBox();
             this.deletePlayersButton = new System.Windows.Forms.Button();
@@ -48,29 +48,21 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.roomsListBox = new System.Windows.Forms.ListBox();
-            this.worldViewModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.playersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.roomsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            fileLabel = new System.Windows.Forms.Label();
+            this.mainMenuStrip = new System.Windows.Forms.MenuStrip();
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openWorldToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             playerScoreLabel = new System.Windows.Forms.Label();
             playerHealthLabel = new System.Windows.Forms.Label();
             playerNameLabel = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.worldViewModelBindingSource)).BeginInit();
             this.mainTabControl.SuspendLayout();
             this.playersTabPage.SuspendLayout();
-            this.roomsTabPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.worldViewModelBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.playersBindingSource)).BeginInit();
+            this.roomsTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.roomsBindingSource)).BeginInit();
+            this.mainMenuStrip.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // fileLabel
-            // 
-            fileLabel.AutoSize = true;
-            fileLabel.Location = new System.Drawing.Point(2, 10);
-            fileLabel.Name = "fileLabel";
-            fileLabel.Size = new System.Drawing.Size(26, 13);
-            fileLabel.TabIndex = 1;
-            fileLabel.Text = "File:";
             // 
             // playerScoreLabel
             // 
@@ -99,14 +91,9 @@
             playerNameLabel.TabIndex = 11;
             playerNameLabel.Text = "Name";
             // 
-            // filenameTextBox
+            // worldViewModelBindingSource
             // 
-            this.filenameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.worldViewModelBindingSource, "Filename", true));
-            this.filenameTextBox.Location = new System.Drawing.Point(31, 6);
-            this.filenameTextBox.Name = "filenameTextBox";
-            this.filenameTextBox.ReadOnly = true;
-            this.filenameTextBox.Size = new System.Drawing.Size(1226, 20);
-            this.filenameTextBox.TabIndex = 0;
+            this.worldViewModelBindingSource.DataSource = typeof(Zork_Builder.ViewModels.WorldViewModel);
             // 
             // selectFileButton
             // 
@@ -126,10 +113,10 @@
             // 
             this.mainTabControl.Controls.Add(this.playersTabPage);
             this.mainTabControl.Controls.Add(this.roomsTabPage);
-            this.mainTabControl.Location = new System.Drawing.Point(5, 27);
+            this.mainTabControl.Location = new System.Drawing.Point(5, 48);
             this.mainTabControl.Name = "mainTabControl";
             this.mainTabControl.SelectedIndex = 0;
-            this.mainTabControl.Size = new System.Drawing.Size(1333, 701);
+            this.mainTabControl.Size = new System.Drawing.Size(1333, 680);
             this.mainTabControl.TabIndex = 3;
             // 
             // playersTabPage
@@ -146,7 +133,7 @@
             this.playersTabPage.Location = new System.Drawing.Point(4, 22);
             this.playersTabPage.Name = "playersTabPage";
             this.playersTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.playersTabPage.Size = new System.Drawing.Size(1325, 675);
+            this.playersTabPage.Size = new System.Drawing.Size(1325, 654);
             this.playersTabPage.TabIndex = 0;
             this.playersTabPage.Text = "Players";
             this.playersTabPage.UseVisualStyleBackColor = true;
@@ -158,6 +145,11 @@
             this.playerScoreTextBox.Name = "playerScoreTextBox";
             this.playerScoreTextBox.Size = new System.Drawing.Size(132, 20);
             this.playerScoreTextBox.TabIndex = 16;
+            // 
+            // playersBindingSource
+            // 
+            this.playersBindingSource.DataMember = "Players";
+            this.playersBindingSource.DataSource = this.worldViewModelBindingSource;
             // 
             // playerHealthTextBox
             // 
@@ -215,7 +207,7 @@
             this.roomsTabPage.Location = new System.Drawing.Point(4, 22);
             this.roomsTabPage.Name = "roomsTabPage";
             this.roomsTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.roomsTabPage.Size = new System.Drawing.Size(1325, 675);
+            this.roomsTabPage.Size = new System.Drawing.Size(1325, 654);
             this.roomsTabPage.TabIndex = 1;
             this.roomsTabPage.Text = "Items";
             this.roomsTabPage.UseVisualStyleBackColor = true;
@@ -249,19 +241,36 @@
             this.roomsListBox.TabIndex = 0;
             this.roomsListBox.ValueMember = "Name";
             // 
-            // worldViewModelBindingSource
-            // 
-            this.worldViewModelBindingSource.DataSource = typeof(Zork_Builder.ViewModels.WorldViewModel);
-            // 
-            // playersBindingSource
-            // 
-            this.playersBindingSource.DataMember = "Players";
-            this.playersBindingSource.DataSource = this.worldViewModelBindingSource;
-            // 
             // roomsBindingSource
             // 
             this.roomsBindingSource.DataMember = "Rooms";
             this.roomsBindingSource.DataSource = this.worldViewModelBindingSource;
+            // 
+            // mainMenuStrip
+            // 
+            this.mainMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem});
+            this.mainMenuStrip.Location = new System.Drawing.Point(0, 0);
+            this.mainMenuStrip.Name = "mainMenuStrip";
+            this.mainMenuStrip.Size = new System.Drawing.Size(1350, 24);
+            this.mainMenuStrip.TabIndex = 4;
+            this.mainMenuStrip.Text = "menuStrip1";
+            // 
+            // fileToolStripMenuItem
+            // 
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.openWorldToolStripMenuItem});
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.fileToolStripMenuItem.Text = "&File";
+            // 
+            // openWorldToolStripMenuItem
+            // 
+            this.openWorldToolStripMenuItem.Name = "openWorldToolStripMenuItem";
+            this.openWorldToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
+            this.openWorldToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
+            this.openWorldToolStripMenuItem.Text = "&Open World...";
+            this.openWorldToolStripMenuItem.Click += new System.EventHandler(this.OpenToolStripMenuItem_Click);
             // 
             // ZorkBuilder
             // 
@@ -270,29 +279,29 @@
             this.ClientSize = new System.Drawing.Size(1350, 729);
             this.Controls.Add(this.mainTabControl);
             this.Controls.Add(this.selectFileButton);
-            this.Controls.Add(fileLabel);
-            this.Controls.Add(this.filenameTextBox);
+            this.Controls.Add(this.mainMenuStrip);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MainMenuStrip = this.mainMenuStrip;
             this.MaximizeBox = false;
             this.Name = "ZorkBuilder";
             this.Text = "ZorkBuilder";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.ZorkBuilder_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.worldViewModelBindingSource)).EndInit();
             this.mainTabControl.ResumeLayout(false);
             this.playersTabPage.ResumeLayout(false);
             this.playersTabPage.PerformLayout();
-            this.roomsTabPage.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.worldViewModelBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.playersBindingSource)).EndInit();
+            this.roomsTabPage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.roomsBindingSource)).EndInit();
+            this.mainMenuStrip.ResumeLayout(false);
+            this.mainMenuStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
 		}
 
 		#endregion
-
-		private System.Windows.Forms.TextBox filenameTextBox;
 		private System.Windows.Forms.Button selectFileButton;
 		private System.Windows.Forms.OpenFileDialog openFileDialog;
         private System.Windows.Forms.TabControl mainTabControl;
@@ -310,6 +319,9 @@
         private System.Windows.Forms.BindingSource worldViewModelBindingSource;
         private System.Windows.Forms.BindingSource playersBindingSource;
         private System.Windows.Forms.BindingSource roomsBindingSource;
+        private System.Windows.Forms.MenuStrip mainMenuStrip;
+        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem openWorldToolStripMenuItem;
     }
 }
 
