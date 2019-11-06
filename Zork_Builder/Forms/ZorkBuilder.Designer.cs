@@ -1,4 +1,4 @@
-﻿namespace Zork_Builder
+﻿namespace Zork_Builder.Forms
 {
 	partial class ZorkBuilder
 	{
@@ -34,34 +34,32 @@
             System.Windows.Forms.Label playerHealthLabel;
             System.Windows.Forms.Label playerNameLabel;
             this.filenameTextBox = new System.Windows.Forms.TextBox();
-            this.worldViewModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.selectFileButton = new System.Windows.Forms.Button();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.mainTabControl = new System.Windows.Forms.TabControl();
             this.playersTabPage = new System.Windows.Forms.TabPage();
+            this.playerScoreTextBox = new System.Windows.Forms.TextBox();
+            this.playerHealthTextBox = new System.Windows.Forms.TextBox();
+            this.playerNameTextBox = new System.Windows.Forms.TextBox();
             this.deletePlayersButton = new System.Windows.Forms.Button();
             this.addPlayerButton = new System.Windows.Forms.Button();
             this.playersListBox = new System.Windows.Forms.ListBox();
-            this.playersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.worldBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.roomsTabPage = new System.Windows.Forms.TabPage();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.roomsListBox = new System.Windows.Forms.ListBox();
+            this.worldViewModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.playersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.roomsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.playerScoreTextBox = new System.Windows.Forms.TextBox();
-            this.playerHealthTextBox = new System.Windows.Forms.TextBox();
-            this.playerNameTextBox = new System.Windows.Forms.TextBox();
             fileLabel = new System.Windows.Forms.Label();
             playerScoreLabel = new System.Windows.Forms.Label();
             playerHealthLabel = new System.Windows.Forms.Label();
             playerNameLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.worldViewModelBindingSource)).BeginInit();
             this.mainTabControl.SuspendLayout();
             this.playersTabPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.playersBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.worldBindingSource)).BeginInit();
             this.roomsTabPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.worldViewModelBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roomsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,6 +72,33 @@
             fileLabel.TabIndex = 1;
             fileLabel.Text = "File:";
             // 
+            // playerScoreLabel
+            // 
+            playerScoreLabel.AutoSize = true;
+            playerScoreLabel.Location = new System.Drawing.Point(487, 86);
+            playerScoreLabel.Name = "playerScoreLabel";
+            playerScoreLabel.Size = new System.Drawing.Size(35, 13);
+            playerScoreLabel.TabIndex = 15;
+            playerScoreLabel.Text = "Score";
+            // 
+            // playerHealthLabel
+            // 
+            playerHealthLabel.AutoSize = true;
+            playerHealthLabel.Location = new System.Drawing.Point(487, 46);
+            playerHealthLabel.Name = "playerHealthLabel";
+            playerHealthLabel.Size = new System.Drawing.Size(38, 13);
+            playerHealthLabel.TabIndex = 13;
+            playerHealthLabel.Text = "Health";
+            // 
+            // playerNameLabel
+            // 
+            playerNameLabel.AutoSize = true;
+            playerNameLabel.Location = new System.Drawing.Point(487, 6);
+            playerNameLabel.Name = "playerNameLabel";
+            playerNameLabel.Size = new System.Drawing.Size(35, 13);
+            playerNameLabel.TabIndex = 11;
+            playerNameLabel.Text = "Name";
+            // 
             // filenameTextBox
             // 
             this.filenameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.worldViewModelBindingSource, "Filename", true));
@@ -82,10 +107,6 @@
             this.filenameTextBox.ReadOnly = true;
             this.filenameTextBox.Size = new System.Drawing.Size(1226, 20);
             this.filenameTextBox.TabIndex = 0;
-            // 
-            // worldViewModelBindingSource
-            // 
-            this.worldViewModelBindingSource.DataSource = typeof(Zork_Builder.ViewModels.WorldViewModel);
             // 
             // selectFileButton
             // 
@@ -130,6 +151,30 @@
             this.playersTabPage.Text = "Players";
             this.playersTabPage.UseVisualStyleBackColor = true;
             // 
+            // playerScoreTextBox
+            // 
+            this.playerScoreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.playersBindingSource, "Score", true));
+            this.playerScoreTextBox.Location = new System.Drawing.Point(487, 103);
+            this.playerScoreTextBox.Name = "playerScoreTextBox";
+            this.playerScoreTextBox.Size = new System.Drawing.Size(132, 20);
+            this.playerScoreTextBox.TabIndex = 16;
+            // 
+            // playerHealthTextBox
+            // 
+            this.playerHealthTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.playersBindingSource, "Health", true));
+            this.playerHealthTextBox.Location = new System.Drawing.Point(487, 63);
+            this.playerHealthTextBox.Name = "playerHealthTextBox";
+            this.playerHealthTextBox.Size = new System.Drawing.Size(132, 20);
+            this.playerHealthTextBox.TabIndex = 14;
+            // 
+            // playerNameTextBox
+            // 
+            this.playerNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.playersBindingSource, "Name", true));
+            this.playerNameTextBox.Location = new System.Drawing.Point(487, 23);
+            this.playerNameTextBox.Name = "playerNameTextBox";
+            this.playerNameTextBox.Size = new System.Drawing.Size(935, 20);
+            this.playerNameTextBox.TabIndex = 12;
+            // 
             // deletePlayersButton
             // 
             this.deletePlayersButton.Location = new System.Drawing.Point(87, 645);
@@ -138,6 +183,7 @@
             this.deletePlayersButton.TabIndex = 2;
             this.deletePlayersButton.Text = "&Delete";
             this.deletePlayersButton.UseVisualStyleBackColor = true;
+            this.deletePlayersButton.Click += new System.EventHandler(this.DeletePlayersButton_Click);
             // 
             // addPlayerButton
             // 
@@ -147,6 +193,7 @@
             this.addPlayerButton.TabIndex = 1;
             this.addPlayerButton.Text = "&Add...";
             this.addPlayerButton.UseVisualStyleBackColor = true;
+            this.addPlayerButton.Click += new System.EventHandler(this.AddPlayerButton_Click);
             // 
             // playersListBox
             // 
@@ -159,16 +206,6 @@
             this.playersListBox.TabIndex = 0;
             this.playersListBox.ValueMember = "Health";
             this.playersListBox.SelectedIndexChanged += new System.EventHandler(this.PlayersListBox_SelectedIndexChanged);
-            // 
-            // playersBindingSource
-            // 
-            this.playersBindingSource.DataMember = "Players";
-            this.playersBindingSource.DataSource = this.worldBindingSource;
-            // 
-            // worldBindingSource
-            // 
-            this.worldBindingSource.DataMember = "World";
-            this.worldBindingSource.DataSource = this.worldViewModelBindingSource;
             // 
             // roomsTabPage
             // 
@@ -212,61 +249,19 @@
             this.roomsListBox.TabIndex = 0;
             this.roomsListBox.ValueMember = "Name";
             // 
+            // worldViewModelBindingSource
+            // 
+            this.worldViewModelBindingSource.DataSource = typeof(Zork_Builder.ViewModels.WorldViewModel);
+            // 
+            // playersBindingSource
+            // 
+            this.playersBindingSource.DataMember = "Players";
+            this.playersBindingSource.DataSource = this.worldViewModelBindingSource;
+            // 
             // roomsBindingSource
             // 
             this.roomsBindingSource.DataMember = "Rooms";
-            this.roomsBindingSource.DataSource = this.worldBindingSource;
-            // 
-            // playerScoreTextBox
-            // 
-            this.playerScoreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.playersBindingSource, "Score", true));
-            this.playerScoreTextBox.Location = new System.Drawing.Point(487, 103);
-            this.playerScoreTextBox.Name = "playerScoreTextBox";
-            this.playerScoreTextBox.Size = new System.Drawing.Size(132, 20);
-            this.playerScoreTextBox.TabIndex = 16;
-            // 
-            // playerScoreLabel
-            // 
-            playerScoreLabel.AutoSize = true;
-            playerScoreLabel.Location = new System.Drawing.Point(487, 86);
-            playerScoreLabel.Name = "playerScoreLabel";
-            playerScoreLabel.Size = new System.Drawing.Size(35, 13);
-            playerScoreLabel.TabIndex = 15;
-            playerScoreLabel.Text = "Score";
-            // 
-            // playerHealthTextBox
-            // 
-            this.playerHealthTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.playersBindingSource, "Health", true));
-            this.playerHealthTextBox.Location = new System.Drawing.Point(487, 63);
-            this.playerHealthTextBox.Name = "playerHealthTextBox";
-            this.playerHealthTextBox.Size = new System.Drawing.Size(132, 20);
-            this.playerHealthTextBox.TabIndex = 14;
-            // 
-            // playerHealthLabel
-            // 
-            playerHealthLabel.AutoSize = true;
-            playerHealthLabel.Location = new System.Drawing.Point(487, 46);
-            playerHealthLabel.Name = "playerHealthLabel";
-            playerHealthLabel.Size = new System.Drawing.Size(38, 13);
-            playerHealthLabel.TabIndex = 13;
-            playerHealthLabel.Text = "Health";
-            // 
-            // playerNameTextBox
-            // 
-            this.playerNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.playersBindingSource, "Name", true));
-            this.playerNameTextBox.Location = new System.Drawing.Point(487, 23);
-            this.playerNameTextBox.Name = "playerNameTextBox";
-            this.playerNameTextBox.Size = new System.Drawing.Size(935, 20);
-            this.playerNameTextBox.TabIndex = 12;
-            // 
-            // playerNameLabel
-            // 
-            playerNameLabel.AutoSize = true;
-            playerNameLabel.Location = new System.Drawing.Point(487, 6);
-            playerNameLabel.Name = "playerNameLabel";
-            playerNameLabel.Size = new System.Drawing.Size(35, 13);
-            playerNameLabel.TabIndex = 11;
-            playerNameLabel.Text = "Name";
+            this.roomsBindingSource.DataSource = this.worldViewModelBindingSource;
             // 
             // ZorkBuilder
             // 
@@ -283,13 +278,12 @@
             this.Text = "ZorkBuilder";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.ZorkBuilder_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.worldViewModelBindingSource)).EndInit();
             this.mainTabControl.ResumeLayout(false);
             this.playersTabPage.ResumeLayout(false);
             this.playersTabPage.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.playersBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.worldBindingSource)).EndInit();
             this.roomsTabPage.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.worldViewModelBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.roomsBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -301,22 +295,21 @@
 		private System.Windows.Forms.TextBox filenameTextBox;
 		private System.Windows.Forms.Button selectFileButton;
 		private System.Windows.Forms.OpenFileDialog openFileDialog;
-        private System.Windows.Forms.BindingSource worldViewModelBindingSource;
         private System.Windows.Forms.TabControl mainTabControl;
         private System.Windows.Forms.TabPage playersTabPage;
         private System.Windows.Forms.TabPage roomsTabPage;
         private System.Windows.Forms.Button addPlayerButton;
         private System.Windows.Forms.ListBox playersListBox;
         private System.Windows.Forms.Button deletePlayersButton;
-        private System.Windows.Forms.BindingSource worldBindingSource;
-        private System.Windows.Forms.BindingSource playersBindingSource;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ListBox roomsListBox;
-        private System.Windows.Forms.BindingSource roomsBindingSource;
         private System.Windows.Forms.TextBox playerScoreTextBox;
         private System.Windows.Forms.TextBox playerHealthTextBox;
         private System.Windows.Forms.TextBox playerNameTextBox;
+        private System.Windows.Forms.BindingSource worldViewModelBindingSource;
+        private System.Windows.Forms.BindingSource playersBindingSource;
+        private System.Windows.Forms.BindingSource roomsBindingSource;
     }
 }
 

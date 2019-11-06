@@ -10,6 +10,10 @@ namespace Zork_Builder.Data
 
 		public List<Room> Rooms { get; set; }
 
-
+        public World()
+        {
+            Players = new List<Player>();
+            Rooms = new List<Room>();
+        }
 	}
 }

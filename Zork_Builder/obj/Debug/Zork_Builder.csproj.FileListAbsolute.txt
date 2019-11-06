@@ -23,7 +23,6 @@ C:\Users\Nick\Documents\GitHub\Zork_Builder\Zork_Builder\bin\Debug\Zork_Builder.
 C:\Users\Nick\Documents\GitHub\Zork_Builder\Zork_Builder\bin\Debug\Zork_Builder.Data.pdb
 C:\Users\Nick\Documents\GitHub\Zork_Builder\Zork_Builder\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Nick\Documents\GitHub\Zork_Builder\Zork_Builder\obj\Debug\Zork_Builder.csprojAssemblyReference.cache
-C:\Users\Nick\Documents\GitHub\Zork_Builder\Zork_Builder\obj\Debug\Zork_Builder.ZorkBuilder.resources
 C:\Users\Nick\Documents\GitHub\Zork_Builder\Zork_Builder\obj\Debug\Zork_Builder.Properties.Resources.resources
 C:\Users\Nick\Documents\GitHub\Zork_Builder\Zork_Builder\obj\Debug\Zork_Builder.csproj.GenerateResource.cache
 C:\Users\Nick\Documents\GitHub\Zork_Builder\Zork_Builder\obj\Debug\Zork_Builder.csproj.CoreCompileInputs.cache
@@ -31,3 +30,5 @@ C:\Users\Nick\Documents\GitHub\Zork_Builder\Zork_Builder\obj\Debug\Zork_Builder.
 C:\Users\Nick\Documents\GitHub\Zork_Builder\Zork_Builder\obj\Debug\Zork_Builder.exe
 C:\Users\Nick\Documents\GitHub\Zork_Builder\Zork_Builder\obj\Debug\Zork_Builder.pdb
 C:\Users\Nick\Documents\GitHub\Zork_Builder\Zork_Builder\obj\Debug\Zork_Builder.csproj.Fody.CopyLocal.cache
+C:\Users\Nick\Documents\GitHub\Zork_Builder\Zork_Builder\obj\Debug\Zork_Builder.Forms.AddPlayerForm.resources
+C:\Users\Nick\Documents\GitHub\Zork_Builder\Zork_Builder\obj\Debug\Zork_Builder.Forms.ZorkBuilder.resources

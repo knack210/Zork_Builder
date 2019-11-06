@@ -14,7 +14,11 @@ namespace Zork_Builder.Data
 		public int Score { get; set; }
 
 		public List<Room> Inventory { get; set; }
-
+        
+        public Player()
+        {
+            Inventory = new List<Room>();
+        }
         public override string ToString() => Name;        
     }
 }
